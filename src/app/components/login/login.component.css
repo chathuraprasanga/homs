@@ -1,0 +1,51 @@
+.background-image{
+  background-image: url('~src/assets/bg1.jpg');
+  background-color: #f1f1f1;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+}
+
+/**{*/
+/*  margin: 0%;*/
+/*  padding: 0%;*/
+/*}*/
+.card{
+  width: 25rem;
+  align-items: center;
+
+}
+
+.login-div{
+  width: 350px;
+
+}
+
+h1{
+  font-family: 'Exo 2', sans-serif;
+  font-size: 30px;
+
+}
+
+.login-btn{
+  float: right;
+  border-radius: 2px;
+}
+
+.login-input{
+  border-radius: 2px;
+}
+
+.login-card{
+  border-radius: 2px;
+
+}
+
+#basic-addon2 ,#basic-addon1{
+  border-radius: 2px 0px 0px 2px;
+}
+
+.form-control{
+  border-radius: 0px 2px 2px 0px;
+
+}

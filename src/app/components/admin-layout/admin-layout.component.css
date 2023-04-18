@@ -1,0 +1,87 @@
+
+.sidenav {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #000000;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 20px;
+}
+
+.dashboard-logo{
+  width: 175px;
+  margin-bottom: 10px;
+  /* padding-left: 19px; */
+  margin-left: 25px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #000000;
+}
+
+.data-page{
+  margin-left: 260px;
+  margin-right: 20px;
+  margin-top: 40px;
+  margin-bottom: 30px
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+
+}
+
+.slide-nav-item{
+  display: flex;
+  cursor: pointer;
+}
+.slide-nav-item:hover{
+  background-color: #f1f1f1;
+  color: black;
+}
+.slide-nav-item-logout{
+  cursor: pointer;
+}
+.slide-nav-item-logout:hover{
+  background-color: brown;
+
+}
+.logout-link:hover{
+  color: white;
+}
+
+.admin-layout{
+  border-radius: 0px;
+}
+
+.header h1{
+  font-family: 'Exo 2', sans-serif;
+  font-size: 40px;
+
+}
+
+.active{
+  background-color: #f1f1f1;
+}
+
+.active a{
+  color: black;
+}
+.logout-btn{
+  border-radius: 0px;
+}

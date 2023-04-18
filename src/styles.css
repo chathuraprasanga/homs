@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+
+*{
+  font-family: 'Exo 2', sans-serif;
+}
+
+span{
+  font-family: 'Exo 2', sans-serif;
+}
+
+h1 h2 h3 h4 h5 h6 p{
+  font-family: 'Exo 2', sans-serif;
+}
+
+
+html, body {max-width: 100% }
+body { margin: 0; font-family: 'Exo 2', sans-serif; }
+
+.delete-btn{
+  cursor: pointer;
+}
+
+font{
+  font-family: 'Exo 2', sans-serif;
+}
+
+.logout-btn{
+
+}
+.filter-btn{
+  background-color: #77037B;
+  border-radius: 5px;
+}

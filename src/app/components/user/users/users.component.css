@@ -1,0 +1,41 @@
+.header{
+  display: flex;
+  justify-content: space-between;
+  margin: 10px
+}
+
+.edit-btn{
+  cursor: pointer;
+}
+
+input{
+  border-radius: 2px
+}
+
+select{
+  border-radius: 2px
+}
+
+h1{
+  font-family: 'Exo 2', sans-serif;
+}
+.filter-btn{
+  background-color: #77037B;
+  border-color: #77037B;
+  border-radius: 2px;
+}
+.new-edit-btn{
+  background-color: #00337C;
+  border-color: #00337C;
+  border-radius: 2px;
+}
+.search-btn{
+  background-color: #03C988;
+  border-color: #03C988;
+  border-radius: 2px;
+}
+.clear-btn{
+  background-color: #F48484;
+  border-color: #F48484;
+  border-radius: 2px;
+}

@@ -1,0 +1,85 @@
+
+
+
+  <mat-card-header>
+    <mat-card-title>
+
+      <div style="display: flex">
+
+      <svg xmlns="http://www.w3.org/2000/svg" class="back-btn" (click)="goBack()" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M512 256A256 256 0 1 0 0 256a256 256 0 1 0 512 0zM231 127c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-71 71L376 232c13.3 0 24 10.7 24 24s-10.7 24-24 24l-182.1 0 71 71c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0L119 273c-9.4-9.4-9.4-24.6 0-33.9L231 127z"/></svg>
+
+
+      <span *ngIf="pageType == 'edit'">
+        <h1>Edit Product</h1>
+      </span>
+      <span *ngIf="pageType == 'new'">
+        <h1>New Product</h1>
+      </span>
+
+      </div>
+    </mat-card-title>
+  </mat-card-header>
+
+  <br>
+
+  <mat-card-content>
+
+    <form [formGroup]="productForm">
+
+      <div class="d-flex justify-content-around">
+
+      <div class="mb-3" style="width: 98%;margin-left: 1%">
+        <label  class="form-label">Product Code</label>
+        <input class="form-control"  placeholder="Ex: KSL15" formControlName="productCode">
+      </div>
+      <div class="mb-3" style="width: 98%;margin-left: 1%">
+        <label  class="form-label">Product Name</label>
+        <input class="form-control"  placeholder="Ex: Keshara Super Lime " formControlName="productName">
+      </div>
+
+      </div>
+
+      <div class="d-flex justify-content-around">
+
+
+          <div class="mb-3" style="width: 98%;margin-left: 1%">
+            <label  class="form-label">Product Size</label>
+            <input type="text" class="form-control"  placeholder="Ex: 20KG" formControlName="productSize">
+          </div>
+          <div class="mb-3" style="width: 98%;margin-left: 1%">
+            <label  class="form-label">Product Price</label>
+            <input type="number" class="form-control"  placeholder="Ex: 1450.00" formControlName="productPrice">
+          </div>
+
+      </div>
+
+      <div style="margin-bottom: 2%;width: 99%" class="d-flex justify-content-between">
+        <div style="width: 48%; margin-left: 1%">
+          <label  class="form-label">Product Status</label>
+          <select class="form-select" aria-label="Default select example" formControlName="productStatus">
+            <option selected value="ACTIVE">ACTIVE</option>
+            <option value="DEACTIVE">DEACTIVE</option>
+          </select>
+        </div>
+        <div>
+
+        </div>
+
+      </div>
+
+      <div style="margin-bottom: 2%; float: right">
+        <button type="button" class="btn btn-primary save-btn" *ngIf="pageType == 'edit'" (click)="saveProduct()" [disabled]="!isDirty()">
+          Update
+        </button>
+        <button type="button" class="btn btn-primary save-btn" *ngIf="pageType == 'new'" (click)="saveProduct()" [disabled]="!isValid()">
+          Save
+        </button>
+      </div>
+
+    </form>
+
+  </mat-card-content>
+
+<!--  <mat-card-footer>-->
+<!--    <mat-progress-bar mode="indeterminate"></mat-progress-bar>-->
+<!--  </mat-card-footer>-->

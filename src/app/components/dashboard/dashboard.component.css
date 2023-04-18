@@ -1,0 +1,84 @@
+
+
+h1{
+  font-family: 'Exo 2', sans-serif;
+}
+
+.order-count{
+  height: 200px;
+  width: 32%;
+  margin-left: 1%;
+  --bs-border-radius: 5px;
+  background-image: linear-gradient(90turn,#13005A,#1C82AD);
+  color: white;
+}
+.order-count h1{
+  font-size: 30px;
+}
+.order-count p{
+  font-size: 40px;
+  font-weight: bold;
+  align-items: center;
+}
+.hardware-count{
+  height: 200px;
+  width: 32%;
+  margin-left: 1%;
+  --bs-border-radius: 5px;
+  background-image: linear-gradient(90turn,#77037B,#BA90C6);
+  color: white;
+}
+.hardware-count h1{
+  font-size: 30px;
+}
+.hardware-count p{
+  font-size: 40px;
+  font-weight: bold;
+}
+.product-count{
+  height: 200px;
+  width: 32%;
+  margin-left: 1%;
+  --bs-border-radius: 5px;
+  background-image: linear-gradient(90turn,#245953,#57C5B6);
+  color: white;
+}
+.product-count h1{
+  font-size: 30px;
+}
+.product-count p{
+  font-size: 40px;
+  font-weight: bold;
+}
+.total-revenue{
+  height: 200px;
+  width: 24%;
+  margin-left: 1%;
+  --bs-border-radius: 5px;
+  background-image: linear-gradient(90turn,#0E8388,#03C988);
+  color: white;
+}
+.cash-revenue{
+  height: 200px;
+  width: 24%;
+  margin-left: 1%;
+  --bs-border-radius: 5px;
+  background-image: linear-gradient(90turn,#B8621B,#F9DBBB);
+  color: white;
+}
+.cheque-revenue{
+  height: 200px;
+  width: 24%;
+  margin-left: 1%;
+  --bs-border-radius: 5px;
+  background-image: linear-gradient(90turn,#00337C,#A5D7E8);
+  color: white;
+}
+.credit-revenue{
+  height: 200px;
+  width: 24%;
+  margin-left: 1%;
+  --bs-border-radius: 5px;
+  background-image: linear-gradient(90turn,#FF0303,#F48484);
+  color: white;
+}

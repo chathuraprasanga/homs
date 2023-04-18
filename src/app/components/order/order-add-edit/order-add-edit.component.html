@@ -1,0 +1,122 @@
+
+
+
+  <mat-card-header>
+    <mat-card-title>
+
+      <div style="display: flex">
+
+
+        <svg xmlns="http://www.w3.org/2000/svg" class="back-btn" (click)="goBack()" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M512 256A256 256 0 1 0 0 256a256 256 0 1 0 512 0zM231 127c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-71 71L376 232c13.3 0 24 10.7 24 24s-10.7 24-24 24l-182.1 0 71 71c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0L119 273c-9.4-9.4-9.4-24.6 0-33.9L231 127z"/></svg>
+
+
+
+
+        <span *ngIf="pageType == 'edit'">
+        <h1>Edit Order</h1>
+      </span>
+        <span *ngIf="pageType == 'new'">
+        <h1>New Order</h1>
+      </span>
+
+
+      </div>
+
+
+
+    </mat-card-title>
+  </mat-card-header>
+
+  <br>
+
+  <mat-card-content>
+
+    <form [formGroup]="orderForm">
+
+      <div class="d-flex justify-content-around">
+
+      <div class="mb-3" style="width: 98%;margin-left: 1%">
+        <label  class="form-label">Invoice Number</label>
+        <input class="form-control"  placeholder="Ex: WD00XX" formControlName="invoiceNumber">
+      </div>
+      <div style="width: 98%;margin-left: 1%; margin-right: 1%">
+        <label  class="form-label"> Order Date</label>
+        <input class="form-control"  class="form-control" type="date" formControlName="orderDate"/>
+      </div>
+
+
+      </div>
+
+      <div class="mb-3" style="width: 98%; margin-left: 1%">
+        <label  class="form-label">Hardware Name</label>
+        <select class="form-select" aria-label="Default select example" formControlName="hardwareID" required>
+          <option value="">-- Select Hardware --</option>
+          <option *ngFor="let hardware of hardwares"
+                  [value]="hardware.hardwareID">{{hardware.hardwareName}}</option>
+        </select>
+      </div>
+
+      <div class="d-flex justify-content-around">
+
+
+          <div class="mb-3" style="width: 32%">
+            <label  class="form-label">Product Code</label>
+            <select class="form-select" aria-label="Default select example"  formControlName="productID" required id="productID" (change)="changeProduct($event)">
+              <option value="">-- Select Product -- </option>
+            <option *ngFor="let product of products"
+            [value]="product.productID">{{product.productCode}}</option>
+            </select>
+          </div>
+          <div class="mb-3" style="width: 32%">
+            <label  class="form-label">Product Quantity</label>
+            <input type="number" class="form-control"  placeholder="Ex: 500" formControlName="orderQuantity" id="orderQuantity" (keyup)="calculateAmount($event)">
+          </div>
+          <div class="mb-3" style="width: 32%">
+            <label  class="form-label">Product Amount</label>
+            <input type="number" class="form-control"  placeholder="{{orderAmount}}" formControlName="orderAmount" id="orderAmount" >
+          </div>
+
+      </div>
+
+      <div style="margin-bottom: 2%;width: 99%" class="d-flex justify-content-between">
+
+        <div style="width: 48%; margin-left: 1%">
+          <label  class="form-label">Payment Method</label>
+          <select class="form-select" aria-label="Default select example" formControlName="paymentMethod">
+<!--            <option value=""> <i>Select Payment Method</i> </option>-->
+            <option value="CASH">CASH</option>
+            <option value="CHEQUE">CHEQUE</option>
+            <option value="CREDIT">CREDIT</option>
+          </select>
+        </div>
+        <div style="width: 48%; margin-left: 1%">
+          <label  class="form-label">Payment Status</label>
+          <select class="form-select" aria-label="Default select example" formControlName="paymentStatus">
+            <option value="PAID">PAID</option>
+            <option value="NOT PAID">NOT PAID</option>
+          </select>
+        </div>
+
+      </div>
+
+      <div style="width: 8%;margin-bottom: 2%;float: right">
+        <div>
+          <button type="button" class="btn btn-primary save-btn" *ngIf="pageType == 'edit'" (click)="saveOrder()" [disabled]="!isDirty()">
+            Update
+          </button>
+          <button type="button" class="btn btn-primary save-btn" *ngIf="pageType == 'new'" (click)="saveOrder()" [disabled]="!isValid()">
+            Save
+          </button>
+        </div>
+      </div>
+
+
+
+
+    </form>
+
+  </mat-card-content>
+
+<!--  <mat-card-footer>-->
+<!--    <mat-progress-bar mode="indeterminate"></mat-progress-bar>-->
+<!--  </mat-card-footer>-->

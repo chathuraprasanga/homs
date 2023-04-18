@@ -1,0 +1,22 @@
+.back-btn{
+  width: 55px;
+  height: 32px;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+h1{
+  font-family: 'Exo 2', sans-serif;
+}
+.save-btn{
+  background-color: blue;
+  border-color: blue;
+  border-radius: 2px;
+}
+input{
+  border-radius: 2px
+}
+
+select{
+  border-radius: 2px
+}
